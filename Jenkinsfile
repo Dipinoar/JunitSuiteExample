@@ -13,14 +13,10 @@ pipeline {
             }
 
             post {
-             always {
-                junit '**/target/surefire-reports/TEST-*.xml'
+                always {
+                    junit '**/target/surefire-reports/TEST-*.xml'
+                }
             }
-            success {
-                checkReport reportCategories: 'test'
-            }
-            }
-
         }
     }
 }
