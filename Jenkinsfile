@@ -21,18 +21,4 @@ pipeline {
             }
         }
     }
-    
-    post {
-        always {
-            junit 'target/surefire-reports/*.xml'
-            archiveArtifacts 'target/*.jar'
-            publishHTML(target: [
-                allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'target/site',
-                reportFiles: 'index.html'
-            ])
-        }
-    }
 }
