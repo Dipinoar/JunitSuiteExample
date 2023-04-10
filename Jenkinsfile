@@ -4,7 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/Dipinoar/JunitSuiteExample.git'
                 sh 'mvn clean compile'
             }
         }
