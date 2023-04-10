@@ -73,6 +73,7 @@
           </properties>
           <argLine>
             --illegal-access=permit
+            -javaagent:${settings.localRepository}/org/jacoco/org.jacoco.agent/${jacoco.version}/org.jacoco.agent-${jacoco.version}-runtime.jar=destfile=${project.build.directory}/jacoco.exec
           </argLine>
           <testFailureIgnore>true</testFailureIgnore>
           <!--<forkCount>2</forkCount>
